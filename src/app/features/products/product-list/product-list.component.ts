@@ -25,7 +25,7 @@ import { ProductService } from '../../../services/product.service';
         </div>
 
         <div class="col-md-9">
-          <div class="row" *ngIf="(products$ | async) as products; else loading">
+          <div class="row" *ngIf="(filteredProducts$ | async) as products; else loading">
             <div class="col-md-4 mb-4" *ngFor="let product of products">
               <div class="card h-100 shadow-sm hover-card">
                 <img [src]="product.image" class="card-img-top" [alt]="product.name" 
